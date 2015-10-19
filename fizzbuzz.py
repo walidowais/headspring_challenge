@@ -9,7 +9,7 @@ import unittest
 Input: integers start and end for range to render FizzBuzz
 Output: string result that contains FizzBuzz result over range
 """
-def render(start, end):
+def render(start = 0, end = 100):
 	if type(start) != int or type(end) != int:
 		raise ValueError("invalid type for start or end, must be int")
 
