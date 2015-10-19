@@ -3,10 +3,19 @@
 # Filename: fizzbuzz.py
 # Headspring skills assessment
 
-def render():
+import unittest
+
+"""
+Input: integers start and end for range to render FizzBuzz
+Output: string result that contains FizzBuzz result over range
+"""
+def render(start, end):
+	if type(start) != int or type(end) != int:
+		raise ValueError("invalid type for start or end, must be int")
+
 	result = ""
-	i = 1
-	while i <= 100:
+	i = start
+	while i <= end:
 	  if (i % 3 == 0) and (i % 5 == 0):
 	    result += "FizzBuzz"
 	  elif i % 3 == 0:
